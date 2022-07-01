@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>etiket erişimi</title>  
+    <style>
+        .kutu{
+            width:120px;
+            height:120px;
+            margin:10px;
+            float:left;
+        }
+        #mavi{
+        background-color:aqua;
+        }
+        #kirmizi{
+        background-color: firebrick;
+        }
+        #sari{
+        background-color: goldenrod;
+        }
+
+    </style>
+    </head>
+<body>
+    <div id="mavi" class="kutu"></div>
+    <div id="kirmizi" class="kutu"></div>
+    <div id="sari" class="kutu"></div>
+    <script>
+        var isBlue=false;
+        var blue=document.getElementById('mavi');
+        setInterval(function(){
+            if(isBlue){
+                blue.style.background='green';
+                blue.style.width='150px';
+                blue.style.height='150px';           
+                isBlue=false;
+            }
+        else{
+            blue.style.background='blue';
+            blue.style.width='120px';
+            blue.style.height='120px';
+            isBlue=true;
+        }
+        },1000)
+              
+    </script>    
+</body>
+</html>
